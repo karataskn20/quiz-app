@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QuizProgram.qa
+﻿namespace QuizProgram.QuizProps
 {
     public static class Storage
     {
@@ -19,14 +13,14 @@ namespace QuizProgram.qa
 
         public static List<Answer> q1a2 = new List<Answer>()
         {
-            new Answer("a", true), new Answer("b", false), new Answer("c", false),
+            new Answer("a", true)
         };
 
         public static string q1q3 = "What year did WW2 start?" + "\na. 1914" + "\nb. 1928" + "\nc. 1939" + "\nd. 1945 ";
 
         public static List<Answer> q1a3 = new List<Answer>()
         {
-            new Answer("c", true), new Answer("a", false), new Answer("b", false), new Answer("d", false)
+            new Answer("c", true)
         };
     }
 }

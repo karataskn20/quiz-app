@@ -1,8 +1,7 @@
-﻿using QuizProgram;
+﻿using QuizProgram.QuizProps;
 
 class Program
 {
-    
     static void Main()
     {
         bool game = false;
@@ -21,20 +20,15 @@ class Program
         Console.WriteLine("Select quiz 1 or 2.\n");
         string selection = Console.ReadLine();
 
-        quiz1Questions[0].GetType();
-        quiz1Questions[1].GetType();
-        quiz1Questions[2].GetType();
-
-
         if (selection == "1")
         {
-            AskQuestion1();
+            AskQuiz1();
             game = true;
         }
 
         else if (selection == "2")
         {
-            Console.WriteLine("There is no question 2 yet!");
+            Console.WriteLine("There is no quiz 2 yet!");
         }
         else
         {
@@ -44,15 +38,15 @@ class Program
         if (game)
         Console.WriteLine($"Your score is {quiz1.quizScore} out of 3.");
 
-        void AskQuestion1()
+        void AskQuiz1()
         {
             quiz1.QuizInfo();
             quiz1.PrintQuestion(quiz1Questions[0], 1, Storage.q1q1);
             quiz1.QuestionCheck(quiz1Questions[0], Storage.q1a1);
-            quiz1.PrintQuestion(quiz1Questions[0], 2, Storage.q1q2);
-            quiz1.QuestionCheck(quiz1Questions[0], Storage.q1a2);
-            quiz1.PrintQuestion(quiz1Questions[0], 3, Storage.q1q3);
-            quiz1.QuestionCheck(quiz1Questions[0], Storage.q1a3);
+            quiz1.PrintQuestion(quiz1Questions[1], 2, Storage.q1q2);
+            quiz1.QuestionCheck(quiz1Questions[1], Storage.q1a2);
+            quiz1.PrintQuestion(quiz1Questions[2], 3, Storage.q1q3);
+            quiz1.QuestionCheck(quiz1Questions[2], Storage.q1a3);
         }
     }
 }

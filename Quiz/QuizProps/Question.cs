@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QuizProgram.qa
+﻿namespace QuizProgram.QuizProps
 {
     public class Question
     {
-        public string description;
-        public Type questionType;
+        private readonly string description;
+        private  int trueAnswers = 0;
         public List<Answer> answers;
+        public Type questionType;
 
         public Question(string _description, List<Answer> _answers)
         {
@@ -18,13 +13,19 @@ namespace QuizProgram.qa
             this.answers = _answers;
         }
 
-        private void GetType()
+        public void GetType()
         {
-            if (answers.Count == 1)
+            foreach(var answer in answers)
+            {
+                if (answer.isTrue)
+                    trueAnswers++;
+            }
+
+            if (trueAnswers == 1)
             {
                 this.questionType = Type.SingleAnswer;
             }
-            else if (answers.Count > 1)
+            else if (trueAnswers > 1)
             {
                 this.questionType = Type.MultipleAnswer;
             }
@@ -36,7 +37,6 @@ namespace QuizProgram.qa
 
         public string TempType()
         {
-            string tempType;
             if (questionType == Type.SingleAnswer)
             {
                 return "Single Answer";
@@ -47,7 +47,7 @@ namespace QuizProgram.qa
             }
             else
             {
-                return "";
+                return "Open Answer";
             }
         }
     }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QuizProgram.qa
+﻿namespace QuizProgram.QuizProps
 {
     public class Quiz
     {
@@ -12,7 +6,7 @@ namespace QuizProgram.qa
         private int quizSize;
         public int quizScore;
         private List<Question> quizQuestions = new List<Question>();
-        private List<Answer> quizAnswers = new List<Answer>();
+        private readonly List<Answer> quizAnswers = new List<Answer>();
 
         public Quiz(string _quizName, List<Question> _quizQuestions)
         {
@@ -28,6 +22,7 @@ namespace QuizProgram.qa
 
         public void PrintQuestion(Question _question, int _quizID, string _questionDescription)
         {
+            _question.GetType();
             string tempType = _question.TempType();
 
             Console.WriteLine($"\nQuestion with {tempType}.\n" + $"Question {_quizID}: {_questionDescription}");

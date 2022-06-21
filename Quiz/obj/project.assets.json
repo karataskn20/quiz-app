@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nurda\\Desktop\\C#\\Quiz\\Quiz\\QuizProgram.csproj",
+      "projectUniqueName": "C:\\Users\\nurda\\Desktop\\C#\\quiz-app\\Quiz\\QuizProgram.csproj",
       "projectName": "QuizProgram",
-      "projectPath": "C:\\Users\\nurda\\Desktop\\C#\\Quiz\\Quiz\\QuizProgram.csproj",
+      "projectPath": "C:\\Users\\nurda\\Desktop\\C#\\quiz-app\\Quiz\\QuizProgram.csproj",
       "packagesPath": "C:\\Users\\nurda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nurda\\Desktop\\C#\\Quiz\\Quiz\\obj\\",
+      "outputPath": "C:\\Users\\nurda\\Desktop\\C#\\quiz-app\\Quiz\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nurda\\AppData\\Roaming\\NuGet\\NuGet.Config",

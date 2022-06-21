@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QuizProgram.qa
+﻿namespace QuizProgram.QuizProps
 {
     public class Answer
     {
         public string answerDesc;
-
         public bool isTrue;
 
         public Answer(string _answer, bool _correct)
