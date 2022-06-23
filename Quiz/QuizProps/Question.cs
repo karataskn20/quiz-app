@@ -13,7 +13,7 @@
             this.answers = _answers;
         }
 
-        public void GetType()
+        public void GetQuestionType()
         {
             foreach(var answer in answers)
             {
@@ -35,7 +35,7 @@
             }
         }
 
-        public string TempType()
+        public string GetStringType()
         {
             if (questionType == Type.SingleAnswer)
             {

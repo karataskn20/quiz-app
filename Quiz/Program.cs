@@ -18,7 +18,7 @@ class Program
         //Quiz quiz2 = new Quiz("Quiz 2", quiz2Questions);
 
         Console.WriteLine("Select quiz 1 or 2.\n");
-        string selection = Console.ReadLine();
+        string? selection = Console.ReadLine();
 
         if (selection == "1")
         {
@@ -41,12 +41,12 @@ class Program
         void AskQuiz1()
         {
             quiz1.QuizInfo();
-            quiz1.PrintQuestion(quiz1Questions[0], 1, Storage.q1q1);
-            quiz1.QuestionCheck(quiz1Questions[0], Storage.q1a1);
-            quiz1.PrintQuestion(quiz1Questions[1], 2, Storage.q1q2);
-            quiz1.QuestionCheck(quiz1Questions[1], Storage.q1a2);
-            quiz1.PrintQuestion(quiz1Questions[2], 3, Storage.q1q3);
-            quiz1.QuestionCheck(quiz1Questions[2], Storage.q1a3);
+            QuestionManager.PrintQuestion(quiz1Questions[0], 1, Storage.q1q1);
+            QuestionManager.QuestionCheck(quiz1, Storage.q1a1);
+            QuestionManager.PrintQuestion(quiz1Questions[1], 2, Storage.q1q2);
+            QuestionManager.QuestionCheck(quiz1, Storage.q1a2);
+            QuestionManager.PrintQuestion(quiz1Questions[2], 3, Storage.q1q3);
+            QuestionManager.QuestionCheck(quiz1, Storage.q1a3);
         }
     }
 }
